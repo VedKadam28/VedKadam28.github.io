@@ -11,7 +11,7 @@ const CONFIG = {
   photo: "",
 
   // Little stickers in the top-right corner of the main menu
-  tags: ["Freakanator", "Monster DIHHH"],
+  tags: ["Don't look away", "Stay sharp"],
 
   // Fun number in the top-left (like an in-game wallet). Set to null to hide it.
   counter: { symbol: "¥", value: 62140 },
