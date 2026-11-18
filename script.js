@@ -19,14 +19,14 @@ const CONFIG = {
   // Starting color palette: "red", "blue" or "yellow"
   theme: "red",
 
-  // The main menu. Items with an "id" open a page below; items with "href" open a link.
-  // Delete a line to remove that menu item. Leave href "" to hide an item.
+  // The main menu, top to bottom. Delete a line to remove that page.
+  // You can also add { label: "Blog", hint: "...", href: "https://..." } to link somewhere else.
   menu: [
     { id: "about",    label: "About",    hint: "Learn who I am" },
     { id: "projects", label: "Projects", hint: "View completed missions" },
-    { id: "stats",    label: "Stats",    hint: "Check my parameters" },
+    { id: "skills",   label: "Skills",   hint: "Check my arsenal" },
+    { id: "resume",   label: "Resume",   hint: "Review my record" },
     { id: "contact",  label: "Contact",  hint: "Send a calling card" },
-    { label: "Resume", hint: "Open my résumé", href: "" }, // e.g. "resume.pdf"
   ],
 
   about: {
@@ -67,15 +67,61 @@ const CONFIG = {
     ],
   },
 
-  stats: {
-    subtitle: "Parameters",
-    // level is 0–100. rank is optional (auto-shows "Lv 1–9" or "MAX").
-    items: [
-      { name: "Knowledge", level: 80 },
-      { name: "Guts",      level: 65 },
-      { name: "Proficiency", level: 90 },
-      { name: "Kindness",  level: 100 },
-      { name: "Charm",     level: 55, rank: "Smooth" },
+  skills: {
+    subtitle: "Arsenal",
+    // Each group is a card. A skill can be just "Name", or { name: "Name", level: 1-5 }
+    // to show little level pips next to it.
+    groups: [
+      {
+        title: "Languages",
+        items: [{ name: "Python", level: 5 }, { name: "JavaScript", level: 4 }, { name: "HTML & CSS", level: 4 }, { name: "Java", level: 3 }],
+      },
+      {
+        title: "Tools",
+        items: ["Git & GitHub", "VS Code", "Figma", "Excel"],
+      },
+      {
+        title: "Soft Skills",
+        items: ["Public Speaking", "Leadership", "Teamwork", "Problem Solving"],
+      },
+    ],
+  },
+
+  resume: {
+    subtitle: "Track Record",
+    // Upload your résumé PDF next to index.html and put its file name here to show a
+    // "Download PDF" button, e.g. pdf: "resume.pdf". Leave "" to hide the button.
+    pdf: "",
+    sections: [
+      {
+        title: "Experience",
+        entries: [
+          {
+            role: "Your Job Title",
+            org: "Company / Organization",
+            date: "2025 — Present",
+            points: ["What you did, with a result if you can (e.g. built X used by 200 people).", "Another accomplishment or responsibility."],
+          },
+          {
+            role: "Previous Role",
+            org: "Another Place",
+            date: "2024 — 2025",
+            points: ["Something you're proud of from this role."],
+          },
+        ],
+      },
+      {
+        title: "Education",
+        entries: [
+          { role: "Degree or Diploma", org: "School Name", date: "2023 — 2027", points: ["GPA, relevant coursework, clubs, honors."] },
+        ],
+      },
+      {
+        title: "Awards & Activities",
+        entries: [
+          { role: "Award or Activity", org: "Who gave it / where", date: "2025", points: [] },
+        ],
+      },
     ],
   },
 
@@ -233,14 +279,32 @@ const CONFIG = {
         h("p", {}, p.description),
         h("div", { class: "chips" }, (p.tags || []).map(t => h("span", { class: "chip" }, t))),
         p.link ? h("span", { class: "go" }, "VIEW ▶") : null))),
-    stats: () => h("div", { class: "stats" }, CONFIG.stats.items.map((s, i) => {
-      const lv = Math.max(0, Math.min(100, s.level));
-      const rank = s.rank || (lv >= 100 ? "MAX" : "Lv " + Math.max(1, Math.round(lv / 10)));
-      return h("div", { class: "stat st", "--d": i + 1 },
-        h("span", { class: "label" }, s.name),
-        h("div", { class: "bar", role: "img", "aria-label": `${s.name}: ${lv} out of 100` }, h("i", { class: "fill", "--lv": lv + "%" })),
-        h("span", { class: "rank" }, rank));
-    })),
+    skills: () => h("div", { class: "skill-groups" }, CONFIG.skills.groups.map((g, gi) =>
+      h("section", { class: "sgroup st", "--d": gi + 1 },
+        h("h3", {}, ransom(g.title, { tiles: true, seed: g.title + "-sg" })),
+        h("ul", { class: "skill-list" }, g.items.map((it, i) => {
+          const s = typeof it === "string" ? { name: it } : it;
+          const lv = s.level ? Math.max(1, Math.min(5, s.level)) : 0;
+          return h("li", { class: "skill", "--r": ((i * 7 + gi * 3) % 5 - 2) + "deg" },
+            s.name,
+            lv ? h("span", { class: "pips", role: "img", "aria-label": `level ${lv} of 5` },
+              [1, 2, 3, 4, 5].map(n => h("i", { class: n <= lv ? "on" : null }))) : null);
+        }))))),
+    resume: () => {
+      const r = CONFIG.resume;
+      let d = 1;
+      return h("div", { class: "resume" },
+        r.pdf ? h("a", { class: "dl-btn st", "--d": d++, href: r.pdf, target: "_blank", rel: "noopener" }, "▼ Download PDF") : null,
+        r.sections.map(sec => h("section", { class: "rsec" },
+          h("h3", { class: "st", "--d": d++ }, sec.title),
+          h("div", { class: "timeline" }, sec.entries.map(e =>
+            h("article", { class: "entry st", "--d": d++ },
+              h("div", { class: "entry-head" },
+                h("span", { class: "role" }, e.role),
+                e.date ? h("span", { class: "date" }, e.date) : null),
+              e.org ? h("div", { class: "org" }, e.org) : null,
+              e.points?.length ? h("ul", {}, e.points.map(p => h("li", {}, p))) : null))))));
+    },
     contact: () => {
       const c = CONFIG.contact;
       return h("div", { class: "contact-wrap" },
