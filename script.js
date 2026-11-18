@@ -3,15 +3,15 @@
    Change the text, save, upload. No other file needs touching.
    ========================================================= */
 const CONFIG = {
-  name: "Your Name",
-  tagline: "Student · Builder · Phantom Developer",
+  name: "Ved Kadam",
+  tagline: "Student · Builder · Developer",
 
   // Put a photo next to index.html and write its file name here, e.g. "photo.jpg".
   // It gets the high-contrast comic treatment automatically. Leave "" to show your initials.
   photo: "",
 
   // Little stickers in the top-right corner of the main menu
-  tags: ["Don't look away", "Stay sharp"],
+  tags: ["Freakanator", "Monster DIHHH"],
 
   // Fun number in the top-left (like an in-game wallet). Set to null to hide it.
   counter: { symbol: "¥", value: 62140 },
