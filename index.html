@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="red">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main Menu</title>
+  <meta name="description" content="Personal website">
+  <meta name="theme-color" content="#e60012">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=Archivo+Black&family=Bangers&family=Bebas+Neue&family=Permanent+Marker&family=Rubik+Mono+One&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div id="bg" aria-hidden="true">
+    <div class="bg-base"></div>
+    <div class="bg-burst-wrap"><div class="bg-burst"></div></div>
+    <div class="bg-slash"></div>
+    <div class="bg-slash thin"></div>
+    <div class="bg-dots"></div>
+    <div class="shards"></div>
+    <div class="bg-veil"></div>
+  </div>
+
+  <!-- Main menu -->
+  <main id="menuScreen" class="screen active">
+    <div class="tags"></div>
+
+    <section class="hero">
+      <div class="portrait"><div class="portrait-inner"></div></div>
+      <h1 class="name"></h1>
+      <p class="tagline"></p>
+    </section>
+
+    <nav id="menu" aria-label="Main menu"><ul></ul></nav>
+
+    <div class="cmd">
+      <span class="cmd-word"></span>
+      <span class="cmd-hint" id="hintText"></span>
+    </div>
+
+    <div class="counter"></div>
+  </main>
+
+  <!-- Sub pages get built into here by script.js -->
+  <div id="panels"></div>
+
+  <!-- Screen transition -->
+  <div id="wipe" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <button id="themeBtn" type="button"></button>
+
+  <footer class="controls" aria-hidden="true">
+    <span><kbd>▲▼</kbd> Select</span>
+    <span><kbd>⏎</kbd> Confirm</span>
+    <span><kbd>Esc</kbd> Back</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
