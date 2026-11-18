@@ -129,9 +129,9 @@ const CONFIG = {
     subtitle: "Calling Card",
     note: "Want to work together, collab on a project, or just say hi? Pick a channel below. I usually reply within a day or two.",
     items: [
-      { label: "Email",    text: "Email me",  url: "mailto:you@example.com" },
-      { label: "GitHub",   text: "GitHub",    url: "https://github.com/your-username" },
-      { label: "LinkedIn", text: "LinkedIn",  url: "https://www.linkedin.com/in/your-profile" },
+      { label: "Email",    text: "Email me",  url: "mailto:veka6945@colorado.edu" },
+      { label: "GitHub",   text: "GitHub",    url: "https://github.com/VedKadam28" },
+      { label: "LinkedIn", text: "LinkedIn",  url: "https://www.linkedin.com/in/ved-kadam-0549a2450/e" },
     ],
   },
 };
