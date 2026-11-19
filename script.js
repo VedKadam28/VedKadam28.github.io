@@ -11,10 +11,10 @@ const CONFIG = {
   photo: "",
 
   // Little stickers in the top-right corner of the main menu
-  tags: ["Don't look away", "Stay sharp"],
+  tags: ["Throuhgout Heaven And Earth I Alone Am The Honored One"],
 
   // Fun number in the top-left (like an in-game wallet). Set to null to hide it.
-  counter: { symbol: "¥", value: 62140 },
+  counter: { symbol: "¥", value: 32008 },
 
   // Starting color palette: "red", "blue" or "yellow"
   theme: "red",
