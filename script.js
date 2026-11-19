@@ -74,11 +74,11 @@ const CONFIG = {
     groups: [
       {
         title: "Languages",
-        items: [{ name: "Python", level: 5 }, { name: "JavaScript", level: 4 }, { name: "HTML & CSS", level: 4 }, { name: "Java", level: 3 }],
+        items: [{ name: "Python", level: 4 }, { name: "JavaScript", level: 3 }, { name: "C++", level: 4 }, { name: "Arduino", level: 4 }],
       },
       {
         title: "Tools",
-        items: ["Git & GitHub", "VS Code", "Figma", "Excel"],
+        items: ["Git & GitHub", "VS Code", "Fusion 360", "Claude", "Altium"],
       },
       {
         title: "Soft Skills",
@@ -97,29 +97,29 @@ const CONFIG = {
         title: "Experience",
         entries: [
           {
-            role: "Your Job Title",
-            org: "Company / Organization",
-            date: "2025 — Present",
-            points: ["What you did, with a result if you can (e.g. built X used by 200 people).", "Another accomplishment or responsibility."],
+            role: "Mechanical Engineering Student",
+            org: "CU Boulder College of Engineering & Applied Science",
+            date: "2026 — Present",
+            points: ["Produced a functioning automobile safety product alongside proper documentation through teamwork and repeated iterations.", "CU Boulder Formula SAE Electronics Team Member."],
           },
           {
-            role: "Previous Role",
-            org: "Another Place",
-            date: "2024 — 2025",
-            points: ["Something you're proud of from this role."],
+            role: "Cherokee Trail IB Student",
+            org: "Cherokee Trail",
+            date: "2022 — 2026",
+            points: ["My greatest achievement at this institution is graduating with an IB Diploma through a 2 year long rigorous course."],
           },
         ],
       },
       {
         title: "Education",
         entries: [
-          { role: "Degree or Diploma", org: "School Name", date: "2023 — 2027", points: ["GPA, relevant coursework, clubs, honors."] },
+          { role: "High School Degree", org: "Cherokee Trail High School", date: "2022 — 2026", points: ["4.5 Weighted GPA, IB Diploma Graduate, Technology Student Association, National Honor Society, Future Business Leaders of America."] },
         ],
       },
       {
         title: "Awards & Activities",
         entries: [
-          { role: "Award or Activity", org: "Who gave it / where", date: "2025", points: [] },
+          { role: "2026 Fall Expo Apex Innovation Award", org: "CU Boulder Racing Team", date: "November 2026", points: [] },
         ],
       },
     ],
@@ -127,7 +127,7 @@ const CONFIG = {
 
   contact: {
     subtitle: "Calling Card",
-    note: "Want to work together, collab on a project, or just say hi? Pick a channel below. I usually reply within a day or two.",
+    note: "Want to work together, collab on a project, or say hello? Pick a channel below and I will get back to you as soon as possible.",
     items: [
       { label: "Email",    text: "Email me",  url: "mailto:veka6945@colorado.edu" },
       { label: "GitHub",   text: "GitHub",    url: "https://github.com/VedKadam28" },
