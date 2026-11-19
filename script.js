@@ -11,7 +11,7 @@ const CONFIG = {
   photo: "",
 
   // Little stickers in the top-right corner of the main menu
-  tags: ["Throuhgout Heaven And Earth I Alone Am The Honored One"],
+  tags: ["If you don't take risks", "You can't create a future."],
 
   // Fun number in the top-left (like an in-game wallet). Set to null to hide it.
   counter: { symbol: "¥", value: 32008 },
