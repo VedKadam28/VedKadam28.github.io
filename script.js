@@ -47,21 +47,21 @@ const CONFIG = {
     subtitle: "Mission Log",
     items: [
       {
-        title: "Project One",
-        description: "One or two sentences about what this project does and why it's cool.",
-        tags: ["JavaScript", "CSS"],
-        link: "https://github.com/",
+        title: "Rover Mission Control Project",
+        description: "A Console program that simulates movement of a Mars Rover responding to command strings. The code  also tracks the rover’s position, the direction it is facing, and its battery levels while enforcing mission constraints.",
+        tags: ["C++", "VS Code"],
+        link: "https://github.com/VedKadam28/CSCI-1300-Mars-Rover-Mission-Control-Project",
       },
       {
-        title: "Project Two",
-        description: "Describe another thing you made. Link it to GitHub or a live demo.",
-        tags: ["Python", "API"],
+        title: "Approaching Car Warning System",
+        description: "This product allows for the advancement of automobile safety allowing car owners to recognize when there is a threat approaching at a rapid pace or in their direct vicinity.",
+        tags: ["Arduino", "Fusion 360", "Electronics"],
         link: "",
       },
       {
-        title: "Project Three",
-        description: "Hackathon builds, school projects, art, videos — anything counts.",
-        tags: ["Design", "Figma"],
+        title: "Light Activated Record Spinner",
+        description: "Decor wall mounted record holder that spins a vinyl record at a certain light threshold. Light threshold is determined through a potentiometer and photoresistor connected to a LM339 quad comparator.",
+        tags: ["Fusion 360", "Electronics", "Manufacturing"],
         link: "",
       },
     ],
@@ -127,7 +127,7 @@ const CONFIG = {
 
   contact: {
     subtitle: "Calling Card",
-    note: "Want to work together, collab on a project, or say hello? Pick a channel below and I will get back to you as soon as possible.",
+    note: "Want to work together, collab on a project, or say hello? Pick a option below and I will get back to you as soon as possible.",
     items: [
       { label: "Email",    text: "Email me",  url: "mailto:veka6945@colorado.edu" },
       { label: "GitHub",   text: "GitHub",    url: "https://github.com/VedKadam28" },
