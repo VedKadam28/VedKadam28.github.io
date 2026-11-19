@@ -8,7 +8,7 @@ const CONFIG = {
 
   // Put a photo next to index.html and write its file name here, e.g. "photo.jpg".
   // It gets the high-contrast comic treatment automatically. Leave "" to show your initials.
-  photo: "Homepage Portrait.JPG",
+  photo: "",
 
   // Little stickers in the top-right corner of the main menu
   tags: ["Yeah", "The Show's Over"],
