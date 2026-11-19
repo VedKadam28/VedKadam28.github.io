@@ -11,7 +11,7 @@ const CONFIG = {
   photo: "",
 
   // Little stickers in the top-right corner of the main menu
-  tags: ["The Show's Over", "Yeah"],
+  tags: ["Yeah", "The Show's Over"],
 
   // Fun number in the top-left (like an in-game wallet). Set to null to hide it.
   counter: { symbol: "¥", value: 32008 },
