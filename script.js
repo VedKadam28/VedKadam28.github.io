@@ -32,13 +32,13 @@ const CONFIG = {
   about: {
     subtitle: "Profile // Confidential",
     paragraphs: [
-      "Hey! I'm Your Name. Write a couple of sentences here about who you are, what you're into, and what you're working on right now.",
-      "Add a second paragraph about your background, school, job, or the kind of things you love building. Keep it short and punchy.",
+      "Hey I'm Ved Kadam a student at the CU Boulder College of Engineering & Applied Science. Some of my interests include cooking, weightlifting, and biking. As of right now I am in the early steps of working on a really cool biking buddy. Imagine a desk buddy but on your bike, it'll connect to your phone with bluetooth and tell you directions for your destination as well as current weather, time and other updates.",
+      "Almost everything I build has to do something with humor or any of my aforementioned interests. The more interests I have in a project the higher ability I have to provide quality results for it.",
     ],
     profile: [
-      ["Codename", "Your Alias"],
-      ["Location", "Your City"],
-      ["Focus", "Web · Design · Games"],
+      ["Codename", "Ved Kadam"],
+      ["Location", "Boulder, Colorado"],
+      ["Focus", "Electronics · Design · CAD"],
       ["Status", "Open to opportunities"],
     ],
   },
